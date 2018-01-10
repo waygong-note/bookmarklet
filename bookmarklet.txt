@@ -1,0 +1,15 @@
+* use in general note app
+title site
+javascript:(function(){var w = window.open(""); w.document.write(document.title+' '+location.href);})().html
+
+* use in textile/redmine
+"title":site
+javascript:(function(){var w = window.open(""); w.document.write('"'+document.title+'":'+location.href);})().html
+
+* use in dynalist
+[title](site)
+javascript:(function(){var w = window.open(""); w.document.write('['+document.title+']('+location.href+')');})().html
+
+* use in google sheet
+=hyperlink("<site>","<title>")
+javascript:(function(){var w = window.open(""); w.document.write('=hyperlink("'+location.href+'","'+document.title+'")');})().html
